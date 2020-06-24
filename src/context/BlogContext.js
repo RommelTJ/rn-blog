@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const BlogContext = React.createContext();
 
 export const BlogProvider = (props) => {
-  const blogPosts = [
-    { title: "Blog Post 1" },
-    { title: "Blog Post 2" },
-    { title: "Blog Post 3" }
-  ];
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  const addBlogPost = () => {
+    setBlogPosts(prevState => [...prevState, { title: `Blog Post #${blogPosts.length + 1}` }]);
+  };
 
   return (
-    <BlogContext.Provider value={blogPosts}>
+    <BlogContext.Provider value={{ data: blogPosts, addBlogPost }}>
       { props.children }
     </BlogContext.Provider>
   )
