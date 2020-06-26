@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet, FlatList, Button } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 
 import { Context as BlogContext } from "../context/BlogContext";
 
@@ -16,6 +17,7 @@ const IndexScreen = () => {
           return (
             <View>
               <Text>{item.title}</Text>
+              <Feather name="trash" size={20} />
             </View>
           );
         }}
