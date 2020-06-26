@@ -1,10 +1,16 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 const CreateScreen = () => {
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+
   return (
     <View>
-      <Text>Create Screen</Text>
+      <Text>Enter Title:</Text>
+      <TextInput value={title} onChangeText={setTitle}/>
+      <Text>Enter Content:</Text>
+      <TextInput value={content} onChangeText={setContent} />
     </View>
   );
 };
