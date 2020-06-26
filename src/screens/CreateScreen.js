@@ -7,14 +7,24 @@ const CreateScreen = () => {
 
   return (
     <View>
-      <Text>Enter Title:</Text>
-      <TextInput value={title} onChangeText={setTitle}/>
-      <Text>Enter Content:</Text>
-      <TextInput value={content} onChangeText={setContent} />
+      <Text style={styles.label}>Enter Title:</Text>
+      <TextInput style={styles.input} value={title} onChangeText={setTitle}/>
+      <Text style={styles.label}>Enter Content:</Text>
+      <TextInput style={styles.input} value={content} onChangeText={setContent} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input: {
+    fontSize: 18,
+    borderWidth: 1,
+    borderColor: 'black'
+  },
+  label: {
+    fontSize: 20,
+    marginBottom: 10
+  }
+});
 
 export default CreateScreen;
