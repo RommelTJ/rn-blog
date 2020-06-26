@@ -29,7 +29,10 @@ const IndexScreen = () => {
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingVertical: 20,
+    borderTopWidth: 1,
+    borderColor: 'gray'
   },
   title: {
     fontSize: 18
