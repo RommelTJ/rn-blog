@@ -13,6 +13,7 @@ const ShowScreen = (props) => {
   return (
     <View>
       <Text>{blogPost.title}</Text>
+      <Text>{blogPost.content}</Text>
     </View>
   );
 };
