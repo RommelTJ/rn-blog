@@ -8,7 +8,6 @@ const IndexScreen = () => {
 
   return (
     <View>
-      <Text>Index Screen</Text>
       <Button title={"Add Post"} onPress={addBlogPost} />
       <FlatList
         data={state}
