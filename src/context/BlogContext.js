@@ -5,9 +5,6 @@ const blogReducer = (state, action) => {
   switch (action.type) {
     case "get_blogposts":
       return action.payload.blogPosts;
-    case "add_blogpost":
-      const id = `${Math.floor(Math.random() * 99999)}`;
-      return [...state, { id, title: action.payload.title, content: action.payload.content}];
     case "edit_blogpost":
       return state.map(blogPost => blogPost.id === action.payload.id ? action.payload : blogPost);
     case "delete_blogpost":
