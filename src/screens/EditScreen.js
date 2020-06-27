@@ -7,10 +7,10 @@ import BlogPostForm from "../components/BlogPostForm";
 const EditScreen = (props) => {
   const { navigation } = props;
   const id = navigation.getParam('id');
-  const { state } = useContext(BlogContext);
+  const { state, editBlogPost } = useContext(BlogContext);
   const blogPost = state.find(x => x.id === id);
 
-  return <BlogPostForm />;
+  return <BlogPostForm onSubmit={editBlogPost} />;
 };
 
 const styles = StyleSheet.create({});

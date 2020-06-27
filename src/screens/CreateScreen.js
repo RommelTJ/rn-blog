@@ -8,7 +8,11 @@ const CreateScreen = (props) => {
   const { navigation } = props;
   const { addBlogPost } = useContext(BlogContext);
 
-  return <BlogPostForm />;
+  return (
+    <BlogPostForm
+      onSubmit={(title, content) => addBlogPost(title, content, () => navigation.navigate('Index'))}
+    />
+  );
 };
 
 const styles = StyleSheet.create({});
