@@ -10,7 +10,12 @@ const EditScreen = (props) => {
   const { state, editBlogPost } = useContext(BlogContext);
   const blogPost = state.find(x => x.id === id);
 
-  return <BlogPostForm onSubmit={editBlogPost} />;
+  return (
+    <BlogPostForm
+      onSubmit={(title, content) => console.log(title, content)}
+      initialValues={{ title: blogPost.title, content: blogPost.content }}
+    />
+  );
 };
 
 const styles = StyleSheet.create({});
