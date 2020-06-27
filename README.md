@@ -1,6 +1,6 @@
 # rn-blog
 
-Version: 0.0.2 - 27 Jun 2020
+Version: 1.0.0 - 27 Jun 2020
 
 ## Description
 
