@@ -6,13 +6,7 @@ const blogReducer = (state, action) => {
       const id = `${Math.floor(Math.random() * 99999)}`;
       return [...state, { id, title: action.payload.title, content: action.payload.content}];
     case "edit_blogpost":
-      return state.map(blogPost => {
-        if (blogPost.id === action.payload.id) {
-          return {...blogPost, title: action.payload.title, content: action.payload.content};
-        } else {
-          return blogPost;
-        }
-      });
+      return state.map(blogPost => blogPost.id === action.payload.id ? action.payload : blogPost);
     case "delete_blogpost":
       return state.filter(x => x.id !== action.payload);
     default:
